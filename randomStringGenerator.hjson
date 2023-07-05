@@ -1,0 +1,27 @@
+[
+  {
+    type: 'randomStringGenerator',
+    module : 'randomStringGenerator',
+    action : 'run',
+    groupTitle : 'Custom JS',
+    groupIcon : 'fab fa-lg fa-js comp-flows',
+    title : 'randomStringGenerator - @@var(name)@@',
+    icon : 'fad fa-lg fa-random comp-flows',
+    dataPickObject: true,
+    properties : [
+      {
+        group: 'Options',
+        variables: [
+          { name: 'name', optionName: 'name', title: 'Name', type: 'text', required: true},
+          { name: 'length', optionName: 'length', title: 'Length', type: 'text', required: true, help: 'Length of the random string',serverDataBindings: true}    
+        ]
+      },
+      {
+        group: 'Output',
+        variables: [
+          { name: 'output', optionName: 'output', title: 'Output', initValue: true, defaultValue: false, type: 'boolean'}
+        ]
+      }
+    ]
+  }
+]
